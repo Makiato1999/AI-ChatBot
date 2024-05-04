@@ -1,0 +1,1 @@
+package com.chatbot.assitant.api.domain;
