@@ -1,1 +1,3 @@
 /chatbot-api-interfaces/chatbot-api-interfaces.iml
+
+chatbot-api-interfaces/src/main/resources/config.properties
