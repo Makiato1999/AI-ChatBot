@@ -55,6 +55,7 @@ public class ApiTest {
                         System.out.println("Issue: #" + node.get("number").asText() +
                                 " - " + node.get("title").asText());
                     }
+                    System.out.println(jsonResponse);
                 }
             }
         } catch (Exception e) {
@@ -89,8 +90,8 @@ public class ApiTest {
 
             try (CloseableHttpResponse response = httpClient.execute(post)) {
                 if (response.getStatusLine().getStatusCode() == HttpStatus.SC_CREATED) {
-                    String res = EntityUtils.toString(response.getEntity());
-                    System.out.println(res);
+                    String jsonResponse = EntityUtils.toString(response.getEntity());
+                    System.out.println(jsonResponse);
                 } else {
                     System.out.println(response.getStatusLine().getStatusCode());
                 }

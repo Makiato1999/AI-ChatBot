@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfff0be-9ff7-46d7-ba78-42a325c33d78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/GithubissuesApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/aggregates/UnAnsweredIssuesAggregates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/vo/Issue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/vo/Reactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/vo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/target/test-classes/com/chatbot/assitant/test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/target/test-classes/com/chatbot/assitant/test/ApiTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,7 +83,7 @@
       <recent name="$PROJECT_DIR$/chatbot-api-interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.answerQuestion">
+  <component name="RunManager" selected="JUnit.ApiTest.fetchQuestion">
     <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatbot-api-interfaces" />
       <extension name="coverage">
@@ -171,8 +178,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.answerQuestion" />
         <item itemvalue="JUnit.ApiTest.fetchQuestion" />
+        <item itemvalue="JUnit.ApiTest.answerQuestion" />
         <item itemvalue="JUnit.ApiTest" />
         <item itemvalue="JUnit.ApiTest.testPostComment" />
         <item itemvalue="JUnit.ApiTest.fetchGitHubIssues" />
@@ -198,7 +205,7 @@
       <workItem from="1714770495712" duration="109000" />
       <workItem from="1714776810385" duration="56000" />
       <workItem from="1714777083177" duration="2068000" />
-      <workItem from="1714780990758" duration="8941000" />
+      <workItem from="1714780990758" duration="12376000" />
     </task>
     <servers />
   </component>
