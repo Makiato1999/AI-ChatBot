@@ -1,2 +1,3 @@
 
 *.yml
+chatbot-api-interfaces/src/main/resources/application.yml
