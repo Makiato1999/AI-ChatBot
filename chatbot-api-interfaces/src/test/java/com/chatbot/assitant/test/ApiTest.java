@@ -1,6 +1,7 @@
 package com.chatbot.assitant.test;
 
 import com.alibaba.fastjson.JSON;
+import com.chatbot.assitant.api.ApiApplication;
 import com.chatbot.assitant.api.domain.githubissues.model.res.AnswerRes;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,20 +16,26 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
-
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = ApiApplication.class)
 public class ApiTest {
     private static final String REPO_URL = "https://api.github.com/repos/Makiato1999/ChatBot-api/issues";
-    private static final String chatGPT_URL = "https://api.openai.com/v1/chat/completions";
 
     @Value("${ChatBot-api.githubToken}")
     private String githubToken;
+
+    @Value("${ChatBot-api.openAIKey}")
+    private String openAIKey;
+
+    @Value("${ChatBot-api.openAIUrl}")
+    private String openAIUrl;
 
     @Test
     public void test_fetchQuestion() {
@@ -84,12 +91,10 @@ public class ApiTest {
         }
     }
 
-    @Value("${ChatBot-api.openAIKey}")
-    private String openAIKey;
     @Test
     public void test_chatGPT() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-        HttpPost post = new HttpPost(chatGPT_URL);
+        HttpPost post = new HttpPost(openAIUrl);
         post.addHeader("Content-Type", "application/json");
         post.addHeader("Authorization", "Bearer "+openAIKey);
 

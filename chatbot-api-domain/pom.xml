@@ -48,6 +48,8 @@
             <version>RELEASE</version>
             <scope>provided</scope>
         </dependency>
+
+
     </dependencies>
 
 </project>

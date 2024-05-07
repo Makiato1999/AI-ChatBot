@@ -39,7 +39,7 @@ public class OpenAI implements IOpenAI {
 
         String paramJson = "{\"model\": \""+openAIModel+"\", \"messages\": [" +
                 "{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}," +
-                "{\"role\": \"user\", \"content\": \"Briefly explain in a few words what is microservice architecture?\"}]}";
+                "{\"role\": \"user\", \"content\": \""+question+"\"}]}";
 
         StringEntity stringEntity = new StringEntity(paramJson, ContentType.create("text/json", "UTF-8"));
         post.setEntity(stringEntity);
@@ -51,7 +51,7 @@ public class OpenAI implements IOpenAI {
             StringBuilder answers = new StringBuilder();
             List<Choices> choices = aIAnswer.getChoices();
             for (Choices choice : choices) {
-                answers.append(choice.getText());
+                answers.append(choice.getMessage().getContent());
             }
             return answers.toString();
         } else {

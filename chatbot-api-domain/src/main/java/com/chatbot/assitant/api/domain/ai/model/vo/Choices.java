@@ -7,11 +7,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Choices {
-    private String finish_reason;
-
     private int index;
+
+    private Message message;
 
     private String logprobs;
 
-    private String text;
+    private String finish_reason;
 }

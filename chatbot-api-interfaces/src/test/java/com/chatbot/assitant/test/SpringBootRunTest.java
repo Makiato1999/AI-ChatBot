@@ -3,6 +3,7 @@ package com.chatbot.assitant.test;
 
 import com.alibaba.fastjson.JSON;
 import com.chatbot.assitant.api.ApiApplication;
+import com.chatbot.assitant.api.domain.ai.IOpenAI;
 import com.chatbot.assitant.api.domain.githubissues.IGithubissuesApi;
 import com.chatbot.assitant.api.domain.githubissues.model.aggregates.UnAnsweredIssuesAggregates;
 import com.chatbot.assitant.api.domain.githubissues.model.vo.Issue;
@@ -28,6 +29,8 @@ public class SpringBootRunTest {
 
     @Resource
     private IGithubissuesApi githubissuesApi;
+    @Resource
+    private IOpenAI openAI;
 
     @Test
     public void test_githubissuesApi() throws IOException {
@@ -47,4 +50,9 @@ public class SpringBootRunTest {
 
 
     // OpenAI
+    @Test
+    public void test_openAI() throws IOException {
+        String response = openAI.askForChatGPT("Briefly explain in a few words what is microservice architecture?");
+        logger.info("OpenAI test result：{}", response);
+    }
 }

@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfff0be-9ff7-46d7-ba78-42a325c33d78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/model/vo/Choices.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/model/vo/Choices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/service/OpenAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/service/OpenAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/SpringBootRunTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/SpringBootRunTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +52,12 @@
     "JUnit.ApiTest.fetchQuestion.executor": "Run",
     "JUnit.ApiTest.query_unanswered_questions.executor": "Run",
     "JUnit.ApiTest.testPostComment.executor": "Run",
+    "JUnit.ApiTest.test_answerQuestion.executor": "Run",
     "JUnit.ApiTest.test_chatGPT.executor": "Run",
+    "JUnit.ApiTest.test_fetchQuestion.executor": "Run",
     "JUnit.SpringBootRunTest.test_GithubissuesApi.executor": "Run",
     "JUnit.SpringBootRunTest.test_githubissuesApi.executor": "Run",
+    "JUnit.SpringBootRunTest.test_openAI.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -87,8 +89,8 @@
       <recent name="$PROJECT_DIR$/chatbot-api-interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.test_chatGPT">
-    <configuration name="ApiTest.answerQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SpringBootRunTest.test_openAI">
+    <configuration name="ApiTest.test_answerQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatbot-api-interfaces" />
       <extension name="coverage">
         <pattern>
@@ -98,23 +100,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
       <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
-      <option name="METHOD_NAME" value="answerQuestion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiTest.fetchQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatbot-api-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chatbot.assitant.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
-      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
-      <option name="METHOD_NAME" value="fetchQuestion" />
+      <option name="METHOD_NAME" value="test_answerQuestion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootRunTest.test_GithubissuesApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.test_fetchQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatbot-api-interfaces" />
       <extension name="coverage">
         <pattern>
@@ -145,8 +131,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
-      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.SpringBootRunTest" />
-      <option name="METHOD_NAME" value="test_GithubissuesApi" />
+      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
+      <option name="METHOD_NAME" value="test_fetchQuestion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,6 +154,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootRunTest.test_openAI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot-api-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chatbot.assitant.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.SpringBootRunTest" />
+      <option name="METHOD_NAME" value="test_openAI" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ChatBot-api" />
       <method v="2">
@@ -183,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringBootRunTest.test_openAI" />
         <item itemvalue="JUnit.ApiTest.test_chatGPT" />
         <item itemvalue="JUnit.SpringBootRunTest.test_githubissuesApi" />
-        <item itemvalue="JUnit.ApiTest.answerQuestion" />
-        <item itemvalue="JUnit.SpringBootRunTest.test_GithubissuesApi" />
-        <item itemvalue="JUnit.ApiTest.fetchQuestion" />
+        <item itemvalue="JUnit.ApiTest.test_answerQuestion" />
+        <item itemvalue="JUnit.ApiTest.test_fetchQuestion" />
       </list>
     </recent_temporary>
   </component>
