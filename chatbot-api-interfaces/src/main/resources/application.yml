@@ -1,9 +1,0 @@
-server:
-  port: 8090
-
-ChatBot-api:
-  githubToken: jjjj
-  repositoryName: ChatBot-api
-  openAIKey: jjjj
-  openAIModel: gpt-3.5-turbo
-  openAIUrl: https://api.openai.com/v1/chat/completions
