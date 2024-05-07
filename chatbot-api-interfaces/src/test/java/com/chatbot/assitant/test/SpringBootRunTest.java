@@ -47,4 +47,5 @@ public class SpringBootRunTest {
 
 
     // OpenAI
+    @Test
 }
