@@ -5,7 +5,7 @@ import com.chatbot.assitant.api.domain.githubissues.model.aggregates.UnAnsweredI
 import java.io.IOException;
 
 public interface IGithubissuesApi {
-    UnAnsweredIssuesAggregates queryUnAnsweredIssuesId(String repositoryName, String cookie) throws IOException;
+    UnAnsweredIssuesAggregates queryUnAnsweredIssuesId(String repositoryName) throws IOException;
 
-    boolean answer(String repositoryName, String cookie, String issueId, String text) throws IOException;
+    boolean answer(String repositoryName, int issueId, String text) throws IOException;
 }

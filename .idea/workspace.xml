@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfff0be-9ff7-46d7-ba78-42a325c33d78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/GithubissuesApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/aggregates/UnAnsweredIssuesAggregates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/vo/Issue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/vo/Reactions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/vo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/IGithubissuesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/IGithubissuesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/aggregates/UnAnsweredIssuesAggregates.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/aggregates/UnAnsweredIssuesAggregates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/req/ReqData.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/req/ReqData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/res/ResData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/service/GithubissuesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/service/GithubissuesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/com/chatbot/assitant/test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/target/test-classes/com/chatbot/assitant/test/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/target/test-classes/com/chatbot/assitant/test/ApiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/target/classes/com/chatbot/assitant/api/ApiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/target/test-classes/com/chatbot/assitant/test/ApiTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +53,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.ApiTest.answerQuestion.executor": "Run",
+    "JUnit.ApiTest.answerQuestion.executor": "Debug",
     "JUnit.ApiTest.executor": "Run",
     "JUnit.ApiTest.fetchGitHubIssues.executor": "Run",
     "JUnit.ApiTest.fetchQuestion.executor": "Run",
     "JUnit.ApiTest.query_unanswered_questions.executor": "Run",
     "JUnit.ApiTest.testPostComment.executor": "Run",
+    "JUnit.ApiTest.test_chatGPT.executor": "Run",
+    "JUnit.SpringBootRunTest.test_GithubissuesApi.executor": "Run",
+    "JUnit.SpringBootRunTest.test_githubissuesApi.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -64,7 +71,7 @@
     "Spring Boot.ApiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/xiexiaoran/Documents/GitHub/ChatBot-api",
+    "last_opened_file_path": "/Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,32 +80,20 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chatbot-api-domain/src/main/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/chatbot-api-interfaces/src/main/resources" />
       <recent name="$PROJECT_DIR$/chatbot-api-interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.fetchQuestion">
-    <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatbot-api-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chatbot.assitant.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
-      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ApiTest.test_chatGPT">
     <configuration name="ApiTest.answerQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatbot-api-interfaces" />
       <extension name="coverage">
@@ -110,22 +105,6 @@
       <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
       <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
       <option name="METHOD_NAME" value="answerQuestion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiTest.fetchGitHubIssues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatbot-api-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chatbot.assitant.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
-      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
-      <option name="METHOD_NAME" value="fetchGitHubIssues" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.testPostComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.test_chatGPT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatbot-api-interfaces" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +136,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
       <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.ApiTest" />
-      <option name="METHOD_NAME" value="testPostComment" />
+      <option name="METHOD_NAME" value="test_chatGPT" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootRunTest.test_GithubissuesApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot-api-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chatbot.assitant.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.SpringBootRunTest" />
+      <option name="METHOD_NAME" value="test_GithubissuesApi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootRunTest.test_githubissuesApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot-api-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chatbot.assitant.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chatbot.assitant.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chatbot.assitant.test.SpringBootRunTest" />
+      <option name="METHOD_NAME" value="test_githubissuesApi" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.fetchQuestion" />
+        <item itemvalue="JUnit.ApiTest.test_chatGPT" />
+        <item itemvalue="JUnit.SpringBootRunTest.test_githubissuesApi" />
         <item itemvalue="JUnit.ApiTest.answerQuestion" />
-        <item itemvalue="JUnit.ApiTest" />
-        <item itemvalue="JUnit.ApiTest.testPostComment" />
-        <item itemvalue="JUnit.ApiTest.fetchGitHubIssues" />
+        <item itemvalue="JUnit.SpringBootRunTest.test_GithubissuesApi" />
+        <item itemvalue="JUnit.ApiTest.fetchQuestion" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +216,7 @@
       <workItem from="1714770495712" duration="109000" />
       <workItem from="1714776810385" duration="56000" />
       <workItem from="1714777083177" duration="2068000" />
-      <workItem from="1714780990758" duration="12376000" />
+      <workItem from="1714780990758" duration="39039000" />
     </task>
     <servers />
   </component>

@@ -1,17 +1,21 @@
 package com.chatbot.assitant.test;
 
+import com.alibaba.fastjson.JSON;
+import com.chatbot.assitant.api.domain.githubissues.model.res.AnswerRes;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,26 +25,18 @@ import java.util.Properties;
 
 public class ApiTest {
     private static final String REPO_URL = "https://api.github.com/repos/Makiato1999/ChatBot-api/issues";
+    private static final String chatGPT_URL = "https://api.openai.com/v1/chat/completions";
+
+    @Value("${ChatBot-api.githubToken}")
+    private String githubToken;
+
     @Test
-    public void fetchQuestion() {
-        Properties config = new Properties();
-        String TOKEN = "";
-        try {
-            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("config.properties");
-            if (inputStream != null) {
-                config.load(inputStream);
-                TOKEN = config.getProperty("github.token");
-            } else {
-                throw new FileNotFoundException("Sorry, unable to find config.properties");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void test_fetchQuestion() {
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             // Create a HttpGet request
             HttpGet request = new HttpGet(REPO_URL);
-            request.setHeader("Authorization", "token " + TOKEN);
+            request.setHeader("Authorization", "token " + githubToken);
             request.setHeader("Accept", "application/vnd.github.v3+json");
 
             // Execute the request
@@ -63,25 +59,11 @@ public class ApiTest {
         }
     }
     @Test
-    public void answerQuestion() {
-        Properties config = new Properties();
-        String TOKEN = "";
-        try {
-            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("config.properties");
-            if (inputStream != null) {
-                config.load(inputStream);
-                TOKEN = config.getProperty("github.token");
-            } else {
-                throw new FileNotFoundException("Sorry, unable to find config.properties");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+    public void test_answerQuestion() {
         String commentUrl = REPO_URL + "/" + "1" + "/comments";
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpPost post = new HttpPost(commentUrl);
-            post.setHeader("Authorization", "token " + TOKEN);
+            post.setHeader("Authorization", "token " + githubToken);
             post.setHeader("Accept", "application/vnd.github.v3+json");
             post.setHeader("Content-Type", "application/json");
 
@@ -99,6 +81,31 @@ public class ApiTest {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    @Value("${ChatBot-api.openAIKey}")
+    private String openAIKey;
+    @Test
+    public void test_chatGPT() throws IOException {
+        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+        HttpPost post = new HttpPost(chatGPT_URL);
+        post.addHeader("Content-Type", "application/json");
+        post.addHeader("Authorization", "Bearer "+openAIKey);
+
+        String paramJson = "{\"model\": \"gpt-3.5-turbo\", \"messages\": [" +
+                "{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}," +
+                "{\"role\": \"user\", \"content\": \"Briefly explain in a few words what is microservice architecture?\"}]}";
+
+        StringEntity stringEntity = new StringEntity(paramJson, ContentType.create("text/json", "UTF-8"));
+        post.setEntity(stringEntity);
+
+        CloseableHttpResponse response = httpClient.execute(post);
+        if (response.getStatusLine().getStatusCode()  == HttpStatus.SC_OK) {
+            String jsonStr = EntityUtils.toString(response.getEntity());
+            System.out.println(jsonStr);
+        } else {
+            System.out.println(response.getStatusLine().getStatusCode());
         }
     }
 }

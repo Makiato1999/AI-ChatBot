@@ -2,3 +2,8 @@
 
 chatbot-api-interfaces/src/main/resources/config.properties
 chatbot-api-interfaces/target/classes/config.properties
+chatbot-api-domain/src/main/resources/config.properties
+chatbot-api-domain/target/classes/config.properties
+chatbot-api-interfaces/target/classes/application.yml
+chatbot-api-interfaces/src/main/resources/application.yml
+*.yml
