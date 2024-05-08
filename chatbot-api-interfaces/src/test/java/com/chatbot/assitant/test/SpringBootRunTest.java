@@ -35,13 +35,13 @@ public class SpringBootRunTest {
     @Test
     public void test_githubissuesApi() throws IOException {
         UnAnsweredIssuesAggregates unAnsweredIssuesAggregates = githubissuesApi.queryUnAnsweredIssuesId(repositoryName);
-        logger.info("TestResult:\n--> {}", JSON.toJSONString(unAnsweredIssuesAggregates));
+        //logger.info("TestResult:\n--> {}", JSON.toJSONString(unAnsweredIssuesAggregates));
 
         List<Issue> issues = unAnsweredIssuesAggregates.getRespData().getIssues();
         for (Issue issue : issues) {
             int issueId = issue.getNumber();
             String title = issue.getTitle();
-            logger.info("issueId：{} title：{}", issueId, title);
+            logger.info("Pull unanswered issues:\n--> issueId：{} title：{}\n", issueId, title);
 
             // Answer question
             githubissuesApi.answer(repositoryName, issueId, title);

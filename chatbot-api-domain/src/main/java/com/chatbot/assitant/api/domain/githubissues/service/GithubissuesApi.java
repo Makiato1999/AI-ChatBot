@@ -53,10 +53,9 @@ public class GithubissuesApi implements IGithubissuesApi {
         CloseableHttpResponse response = httpClient.execute(request);
         if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
             String jsonStr = EntityUtils.toString(response.getEntity());
-            logger.info("Pull issue question data\n--> repositoryName：{} jsonStr：{}", repositoryName, jsonStr);
+            logger.info("Pull all issues question data\n--> repositoryName：{} jsonStr：{}", repositoryName, jsonStr);
             List<Issue> issues = JSON.parseArray(jsonStr, Issue.class);
-            UnAnsweredIssuesAggregates unAnsweredIssuesAggregates = new UnAnsweredIssuesAggregates(issues);
-            return unAnsweredIssuesAggregates;
+            return new UnAnsweredIssuesAggregates(issues);
         } else {
             throw new RuntimeException("queryUnAnsweredIssuesId Err Code is " + response.getStatusLine().getStatusCode());
         }
@@ -84,7 +83,7 @@ public class GithubissuesApi implements IGithubissuesApi {
         CloseableHttpResponse response = httpClient.execute(post);
         if (response.getStatusLine().getStatusCode()  == HttpStatus.SC_CREATED) {
             String jsonStr = EntityUtils.toString(response.getEntity());
-            logger.info("Pull issue answer data\n--> repositoryName：{} issueId：{} jsonStr：{}", repositoryName, issueId, jsonStr);
+            logger.info("Pull issues answer data\n--> repositoryName：{} issueId：{} jsonStr：{}", repositoryName, issueId, jsonStr);
             AnswerRes answerRes = JSON.parseObject(jsonStr, AnswerRes.class);
             return answerRes.isCommentPostedSuccessfully();
         } else {

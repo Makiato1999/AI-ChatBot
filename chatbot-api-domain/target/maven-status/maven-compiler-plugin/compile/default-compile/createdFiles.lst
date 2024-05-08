@@ -1,3 +1,4 @@
+com/chatbot/assitant/api/domain/ai/model/vo/Message.class
 com/chatbot/assitant/api/domain/ai/model/vo/Usage.class
 com/chatbot/assitant/api/domain/githubissues/model/vo/Issue.class
 com/chatbot/assitant/api/domain/ai/service/OpenAI.class

@@ -11,6 +11,7 @@
 /Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/package-info.java
 /Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/model/aggregates/UnAnsweredIssuesAggregates.java
 /Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/service/GithubissuesApi.java
+/Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/model/vo/Message.java
 /Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/githubissues/IGithubissuesApi.java
 /Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/model/aggregates/AIAnswer.java
 /Users/xiexiaoran/Documents/GitHub/ChatBot-api/chatbot-api-domain/src/main/java/com/chatbot/assitant/api/domain/ai/model/vo/Usage.java
