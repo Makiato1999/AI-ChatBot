@@ -17,7 +17,7 @@ docker run -d -p 8090:8090 --name ChatBot-api makiato1999/chatbot-api-repo:1.0
 ```
 Options Explained
 - -d: Run the container in detached mode (in the background).
-- -p 8090:8090: Map port 8080 of the container to port 8090 on the host. Adjust the ports as necessary for your application.
+- -p 8090:8090: Map port 8090 of the container to port 8090 on the host. Adjust the ports as necessary for your application.
 - --name ChatBot-api: Name the container ChatBot-api for easy reference.
 
 ## Starting the application
