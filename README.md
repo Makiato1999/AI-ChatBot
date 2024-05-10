@@ -2,8 +2,7 @@
 ## Description
 The ChatBot API project leverages the capabilities of ChatGPT to address common and generic questions encountered during the daily research and development learning processes. It is designed to streamline the handling of query information and facilitates the compilation of resources based on accumulated questions. This project is integrated with GitHub Issues to enhance issue tracking and resolution through automated interactions.
 
-# Application Deployment Guide
-## Prerequisites
+## Application Deployment Guide
 Before proceeding, ensure that Docker is installed on your system. You can download and install Docker from Docker's official website.
 
 ## Pulling the Docker Image
